@@ -9,7 +9,7 @@ This project demonstrates an end-to-end data warehousing and analytics solution 
 
 The data architecture for this project follows Medallion Architecture with **Bronze**, **Silver**, and **Gold** layers.
 
-![Data Architecture](docs/data_architecture.png)
+![Data Architecture](docs/data_architecture1.png)
 
 1. **Bronze Layer**  
    Stores raw airline operational data as-is from source CSV files. Data is ingested into a SQL Server database without transformation.
