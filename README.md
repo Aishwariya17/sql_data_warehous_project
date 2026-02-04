@@ -7,42 +7,66 @@ This project demonstrates an end-to-end data warehousing and analytics solution 
 
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture with **Bronze**, **Silver**, and **Gold** layers.
+The data architecture for this project follows **Medallion Architecture** with **Bronze**, **Silver**, and **Gold** layers and integrates data from multiple airline operational source systems.
 
 ![Data Architecture](docs/data_architecture.png)
 
-1. **Bronze Layer**  
-   Stores raw airline operational data as-is from source CSV files. Data is ingested into a SQL Server database without transformation.
+---
 
-2. **Silver Layer**  
-   Applies data cleansing, standardization, deduplication, and business rule validation to prepare high-quality, conformed datasets.
+### Source Systems
 
-3. **Gold Layer**  
-   Contains analytics-ready data modeled using a star schema, optimized for reporting and analytical queries.
+The warehouse consolidates data from **three airline source systems**, reflecting real-world airline data platforms:
+
+#### OPS – Flight Operations (AODB)
+Core flight schedule and movement data.
+- Flights  
+- Airports  
+
+#### IRROPS – Irregular Operations
+Operational disruptions and root-cause events.
+- Delay events  
+- Weather windows  
+
+#### CMS – Crew Management System
+Crew master data and scheduling.
+- Crew  
+- Crew assignments  
+- Aircraft  
+
+---
+
+### Medallion Layers
+
+#### Bronze Layer
+- Stores raw data ingested directly from CSV files
+- No transformations applied
+- Preserves source-system structure and values
+
+#### Silver Layer
+- Cleanses and standardizes data
+- Applies business rules and validations
+- Resolves duplicates and invalid records
+- Creates conformed datasets across source systems
+
+#### Gold Layer
+- Analytics-ready star schema
+- Optimized for reporting and SQL analytics
+- Supports operational KPIs and performance analysis
 
 ---
 
 ## 📖 Project Overview
 
-This project involves:
+This project includes:
 
-1. **Data Architecture**  
-   Designing a modern data warehouse using Medallion Architecture (Bronze, Silver, Gold).
-
-2. **ETL Pipelines**  
-   Extracting, transforming, and loading airline operational data into SQL Server.
-
-3. **Data Modeling**  
-   Developing fact and dimension tables optimized for analytical queries.
-
-4. **Analytics and Reporting**  
-   Creating SQL-based analytical queries to generate actionable operational insights.
+1. Designing a modern SQL Server data warehouse using Medallion Architecture  
+2. Building ETL pipelines to ingest data from OPS, IRROPS, and CMS systems  
+3. Modeling fact and dimension tables for airline analytics  
+4. Writing SQL-based analytical queries for operational insights  
 
 ---
 
 ## 🎯 Skills Demonstrated
-
-This repository is suitable for showcasing expertise in:
 
 - SQL Development  
 - Data Architecture  
@@ -57,12 +81,12 @@ This repository is suitable for showcasing expertise in:
 
 All tools used in this project are free.
 
-- **Datasets:** CSV files simulating airline operations (flights, crew, delays, weather)
-- **SQL Server Express:** Database engine for hosting the data warehouse
-- **SQL Server Management Studio (SSMS):** SQL Server management and query interface
-- **Git and GitHub:** Version control and collaboration
-- **DrawIO:** Architecture, data model, and data flow diagrams
-- **Notion:** Project planning and task tracking
+- **Datasets:** CSV files simulating airline operational systems  
+- **SQL Server Express:** Database engine  
+- **SQL Server Management Studio (SSMS):** Querying and management  
+- **Git & GitHub:** Version control  
+- **DrawIO:** Architecture, data flow, and data model diagrams  
+- **Notion:** Project planning and documentation  
 
 ---
 
@@ -71,88 +95,123 @@ All tools used in this project are free.
 ### Building the Data Warehouse (Data Engineering)
 
 #### Objective
-Develop a modern SQL Server–based data warehouse to consolidate flight operations, crew management, delays, and weather data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-
-- **Data Sources**  
-  Import multiple airline operational datasets provided as CSV files:
-  - Flights
-  - Airports
-  - Aircraft
-  - Crew
-  - Crew assignments
-  - Delay events
-  - Weather windows
-
-- **Data Quality**  
-  Cleanse and resolve data quality issues, including:
-  - Duplicate records
-  - Inconsistent date and timestamp formats
-  - Invalid airport codes
-  - Cancelled flights with actual timestamps
-  - Negative or malformed delay values
-  - Overlapping or invalid crew duty windows
-
-- **Integration**  
-  Combine all datasets into a single analytical data model:
-  - Flights linked to routes, airports, aircraft, and dates
-  - Crew assignments linked to flights and crew members
-  - Delay events linked to standardized delay categories
-  - Weather windows linked to impacted airports
-
-- **Scope**  
-  - Focus on the latest 24 months of data (approximately 50,000 flights)
-  - No historization or slowly changing dimensions required
-  - Retain the most recent valid record when duplicates exist
-
-- **Documentation**  
-  Provide clear documentation for data architecture, data models, and transformation logic to support analytics and business users.
+Develop a SQL Server–based data warehouse that consolidates airline operational data from multiple source systems to enable analytics and decision-making.
 
 ---
 
-### BI and Analytics (Data Analysis)
+### Data Sources
 
-#### Objective
+#### OPS – Flight Operations
+- Flights  
+- Airports  
+
+#### IRROPS – Irregular Operations
+- Delay events  
+- Weather windows  
+
+#### CMS – Crew Management System
+- Crew  
+- Crew assignments  
+- Aircraft  
+
+---
+
+### Data Quality
+
+The project addresses common airline data quality challenges:
+- Duplicate records  
+- Inconsistent date and timestamp formats  
+- Invalid or missing airport codes  
+- Cancelled flights with populated actual timestamps  
+- Negative or malformed delay values  
+- Overlapping or invalid crew duty windows  
+
+---
+
+### Integration
+
+All datasets are integrated into a unified analytical model:
+- Flights linked to routes, airports, aircraft, and calendar dates  
+- Crew assignments linked to flights and crew members  
+- Delay events mapped to standardized delay categories  
+- Weather windows associated with impacted airports  
+
+---
+
+### Scope
+
+- Focus on the most recent **24 months of data**
+- Approximately **50,000 flights**
+- No slowly changing dimensions or historization
+- Retain the most recent valid record when duplicates exist
+
+---
+
+### Documentation
+
+The repository includes documentation for:
+- Data architecture  
+- ETL workflows  
+- Data models (star schema)  
+- Dataset catalog and naming conventions  
+
+---
+
+## 📊 BI and Analytics
+
+### Objective
 Develop SQL-based analytics to deliver insights into:
 
-- Flight on-time performance
-- Crew utilization and duty hours
-- Delay root cause analysis
-- Route, airport, and hub performance
+- Flight on-time performance (OTP)  
+- Crew utilization and duty hours  
+- Delay root cause analysis (IRROPS)  
+- Route, airport, and hub performance  
 
-These insights support operational monitoring and data-driven decision-making.
+These analytics support operational monitoring and data-driven decision-making.
 
 ---
 
 ## 📂 Repository Structure
-```
+
 flight-crew-data-warehouse/
 │
-├── datasets/ # Raw CSV datasets
+├── datasets/
+│ ├── source_ops/ # Flight Operations (OPS)
+│ │ ├── flights.csv
+│ │ └── airports.csv
+│ │
+│ ├── source_irrops/ # Irregular Operations (IRROPS)
+│ │ ├── delay_events.csv
+│ │ └── weather_windows.csv
+│ │
+│ └── source_cms/ # Crew Management System (CMS)
+│ ├── crew.csv
+│ ├── crew_assignments.csv
+│ └── aircraft.csv
 │
-├── docs/ # Documentation and diagrams
-│ ├── etl.drawio # ETL process design
-│ ├── data_architecture.drawio # Medallion architecture diagram
-│ ├── data_catalog.md # Dataset and column metadata
-│ ├── data_flow.drawio # Data flow diagram
-│ ├── data_models.drawio # Star schema and dimensional models
-│ ├── naming-conventions.md # Naming standards
+├── docs/
+│ ├── data_architecture.png
+│ ├── etl.drawio
+│ ├── data_architecture.drawio
+│ ├── data_flow.drawio
+│ ├── data_models.drawio
+│ ├── data_catalog.md
+│ └── naming-conventions.md
 │
-├── scripts/ # SQL scripts
+├── scripts/
 │ ├── bronze/ # Raw ingestion scripts
-│ ├── silver/ # Data cleansing and transformation
-│ ├── gold/ # Analytics-ready models
+│ ├── silver/ # Cleansing and transformations
+│ └── gold/ # Analytics-ready models
 │
-├── tests/ # Data quality and validation checks
+├── tests/ # Data quality checks
 │
-├── README.md # Project overview
-├── LICENSE # License information
-├── .gitignore # Git ignore rules
-└── requirements.txt # Project requirements and setup notes
-```
+├── README.md
+├── LICENSE
+├── .gitignore
+└── requirements.txt
+
 ---
 
 ## 🛡️ License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
