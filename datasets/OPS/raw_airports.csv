@@ -1,0 +1,133 @@
+airport_code,city,state,region,airport_name,hub_flag
+BOS,Boston,MA,Northeast,BOS International,F
+JFK,New York,NY,Northeast,JFK International,
+LGA,New York,NY,Northeast,LGA International,0
+EWR,Newark,NJ,Northeast,EWR International,
+PHL,Philadelphia,PA,Northeast,PHL International,false
+DCA,Washington,DC,Northeast,DCA International,0
+IAD,Washington,VA,Northeast,IAD International,T
+ATL,Atlanta,GA,South,ATL International,
+CLT,Charlotte,NC,South,CLT International,1
+MIA,Miami,FL,South,MIA International,false
+ORD,Chicago,IL,Midwest,ORD International,F
+DFW,Dallas,TX,South,DFW International,1
+IAH,Houston,TX,South,IAH International,F
+DEN,Denver,CO,West,DEN International,false
+PHX,Phoenix,AZ,West,PHX International,
+LAX,Los Angeles,CA,West,LAX International,false
+SFO,San Francisco,CA,West,SFO International,F
+SEA,Seattle,WA,West,SEA International,T
+MSP,Minneapolis,MN,Midwest,MSP International,T
+DTW,Detroit,MI,Midwest,DTW International,T
+BNA,Nashville,TN,South,BNA International,
+AUS,Austin,TX,South,AUS International,0
+SAN,San Diego,CA,West,SAN International,T
+TPA,Tampa,FL,South,TPA International,0
+LAS,Las Vegas,NV,West,LAS International,F
+SLC,Salt Lake City,UT,West,SLC International,T
+PDX,Portland,OR,West,PDX International,0
+MCO,Orlando,FL,South,MCO International,1
+FLL,Fort Lauderdale,FL,South,FLL International,1
+CLE,Cleveland,OH,Midwest,CLE International,true
+CMH,Columbus,OH,Midwest,CMH International,1
+IND,Indianapolis,IN,Midwest,IND International,false
+PIT,Pittsburgh,PA,Northeast,PIT International,true
+RDU,Raleigh,NC,South,RDU International,
+MSY,New Orleans,LA,South,MSY International,0
+SAT,San Antonio,TX,South,SAT International,false
+SJC,San Jose,CA,West,SJC International,true
+OAK,Oakland,CA,West,OAK International,T
+HNL,Honolulu,HI,West,HNL International,F
+KEM,City1,NV,Northeast,KEM International,false
+RDL,City2,OH,Northeast,RDL International,0
+GBC,City3,VA,West,GBC International,false
+CRN,City4,TX,Northeast,CRN International,false
+UUS,City5,TX,West,UUS International,false
+HBR,City6,MA,Midwest,HBR International,0
+RDS,City7,CO,South,RDS International,
+SUG,City8,PA,Northeast,SUG International,true
+CSB,City9,IN,South,CSB International,1
+RNY,City10,AZ,West,RNY International,true
+OLJ,City11,NC,South,OLJ International,false
+HCS,City12,CO,West,HCS International,false
+XOJ,City13,IN,Northeast,XOJ International,1
+NFY,City14,AZ,South,NFY International,0
+NBV,City15,FL,Midwest,NBV International,1
+LTP,City16,OH,West,LTP International,F
+CIP,City17,OR,Northeast,CIP International,false
+WJU,City18,OH,West,WJU International,true
+MVL,City19,CA,West,MVL International,F
+TDP,City20,TX,South,TDP International,F
+EXH,City21,NJ,West,EXH International,false
+PCF,City22,MI,West,PCF International,
+ENR,City23,WA,West,ENR International,1
+VMH,City24,MA,Northeast,VMH International,1
+HVH,City25,CA,West,HVH International,F
+FIJ,City26,CA,South,FIJ International,1
+LTS,City27,AZ,South,LTS International,0
+QTU,City28,UT,Northeast,QTU International,0
+YVZ,City29,LA,West,YVZ International,false
+MDP,City30,NV,West,MDP International,
+CGO,City31,IL,Northeast,CGO International,F
+BDA,City32,OH,South,BDA International,false
+LTA,City33,FL,South,LTA International,1
+EUI,City34,PA,Midwest,EUI International,false
+DPO,City35,MN,West,DPO International,true
+EDX,City36,AZ,Midwest,EDX International,T
+WFQ,City37,CA,South,WFQ International,false
+QLE,City38,OR,Northeast,QLE International,true
+JUC,City39,OR,Midwest,JUC International,F
+FLY,City40,NC,Midwest,FLY International,T
+TZZ,City41,GA,South,TZZ International,
+XZH,City42,GA,West,XZH International,0
+AAZ,City43,WA,West,AAZ International,T
+WTL,City44,MI,Midwest,WTL International,T
+LCH,City45,NY,South,LCH International,F
+KGP,City46,IN,Northeast,KGP International,true
+ULZ,City47,NV,Northeast,ULZ International,1
+DMZ,City48,OR,South,DMZ International,
+FNZ,City49,NV,Midwest,FNZ International,F
+XMO,City50,NJ,Northeast,XMO International,true
+FEA,City51,MA,West,FEA International,
+ETT,City52,MN,Midwest,ETT International,T
+REA,City53,CA,Northeast,REA International,0
+ENG,City54,GA,Northeast,ENG International,1
+JQH,City55,OH,Midwest,JQH International,true
+NEB,City56,HI,Midwest,NEB International,T
+VSQ,City57,VA,South,VSQ International,false
+QQA,City58,MI,South,QQA International,1
+YZE,City59,IL,South,YZE International,0
+XDR,City60,TX,Midwest,XDR International,F
+QRP,City61,NY,Northeast,QRP International,0
+IBY,City62,NY,West,IBY International,F
+YCO,City63,AZ,South,YCO International,F
+OQR,City64,MN,South,OQR International,0
+IRG,City65,MI,South,IRG International,F
+MOK,City66,FL,South,MOK International,T
+GVJ,City67,NY,South,GVJ International,T
+UVL,City68,MA,Midwest,UVL International,1
+OHX,City69,NY,West,OHX International,
+FVH,City70,IL,West,FVH International,1
+MKN,City71,GA,Midwest,MKN International,
+XLA,City72,AZ,West,XLA International,T
+AMK,City73,TN,Midwest,AMK International,F
+CDZ,City74,NC,Northeast,CDZ International,
+FIY,City75,MA,West,FIY International,T
+VIM,City76,MA,West,VIM International,
+CIB,City77,OR,South,CIB International,1
+CIA,City78,NV,Northeast,CIA International,1
+CTH,City79,FL,Midwest,CTH International,T
+RNI,City80,IN,South,RNI International,0
+WHD,City81,IL,Midwest,WHD International,T
+CDZ,City74,NC,Northeast,CDZ International,T
+EDX,City36 ,AZ,Midwest,EDX International,T
+TZZ,City41-Metro,GA,South,TZZ International,F
+FNZ,City49 ,NV,Midwest,FNZ International,false
+YZE,City59-Metro,il,South,YZE International,true
+DEN,Denver,CO,West,DEN International,false
+YCO,City63 ,AZ,South,YCO International,false
+DCA,Washington ,DC,Northeast,DCA International,true
+GVJ,City67-Metro,ny,South,GVJ International,false
+OLJ,City11-Metro,NC,South,OLJ International,F
+FIY,City75,ma,West,FIY International,true
+VMH,City24 ,MA,Northeast,VMH International,F
